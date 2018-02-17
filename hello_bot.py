@@ -15,6 +15,7 @@ from helpers import (read_yaml_data,
 flask_app = Flask(__name__)
 spark_api = None
 interaction = {}
+used = {}
 with open('interactions.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
@@ -52,12 +53,13 @@ def sparkwebhook():
         else:
             words = message.text.split(' ')
             x=0
-            for i in words:
-                if(i in interaction):
-
+            j=0
+            while i len(words):
+                if(i in interaction and interaction[i] not in used):
                     spark_api.messages.create(room.id, text=interaction[i])
+                    used[j]=interaction[i]
                     x=1
-            if(x==0):        
+            if(x==0):
                 spark_api.messages.create(room.id, text='HELLO')
 
     else:
