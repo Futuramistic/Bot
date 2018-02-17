@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #  -*- coding: utf-8 -*-
-
+import csv
 # 3rd party imports ------------------------------------------------------------
 from flask import Flask, request
 from ciscosparkapi import CiscoSparkAPI, Webhook
@@ -50,12 +50,15 @@ def sparkwebhook():
         if message.personId == me.id:
             return 'OK'
         else:
-            words = message.text.split(" ")
-            for i in words
+            words = message.text.split(' ')
+            x=0
+            for i in words:
                 if(i in interaction):
-                    spark_api.messages.create(room.id, interaction[i])
 
-            spark_api.messages.create(room.id, "HELLO")
+                    spark_api.messages.create(room.id, text=interaction[i])
+                    x=1
+            if(x==0):        
+                spark_api.messages.create(room.id, text='HELLO')
 
     else:
         print('received none post request, not handled!')
