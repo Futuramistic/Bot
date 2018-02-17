@@ -55,14 +55,12 @@ def sparkwebhook():
         else:
             words = message.text.split(' ')
             x=0
-            j=0
             i=0
             while (i < len(words) and x==0):
                 word = words[i]
-                if(word in interaction and interaction[word] not in used):
+                if(word in interaction and interaction[word] not in used.values):
                     spark_api.messages.create(room.id, text=random.choice(interaction[word]))
                     used.apend(interaction[word])
-                    j=j+1
                     x=1
             if(x==0):
                 spark_api.messages.create(room.id, text='HELLO')
