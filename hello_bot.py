@@ -16,11 +16,11 @@ flask_app = Flask(__name__)
 spark_api = None
 interaction = {}
 with open('interactions.csv') as csvfile:
-readCSV = csv.reader(csvfile, delimiter=',')
-for row in readCSV:
-    key = row[0]
-    action = row[1]
-    interaction[key]=action
+    readCSV = csv.reader(csvfile, delimiter=',')
+    for row in readCSV:
+        key = row[0]
+        action = row[1]
+        interaction[key]=action
 
 @flask_app.route('/sparkwebhook', methods=['POST'])
 
@@ -50,15 +50,12 @@ def sparkwebhook():
         if message.personId == me.id:
             return 'OK'
         else:
-            words = message.split(" ")
-            notFound = True
-            while i < len(words) and notFound==True
-                if(words[i] in interaction):
-                notFound == False
-            if(notFound==False):
-                spark_api.messages.create(room.id, interaction(words[i]))
-            else:
-                spark_api.messages.create(room.id, "HELLO")
+            words = message.text.split(" ")
+            for i in words
+                if(i in interaction):
+                    spark_api.messages.create(room.id, interaction[i])
+
+            spark_api.messages.create(room.id, "HELLO")
 
     else:
         print('received none post request, not handled!')
