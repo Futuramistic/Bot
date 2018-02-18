@@ -1,4 +1,4 @@
-# DockerSparkBotExample
+# Alzheimer's Assistant
 This should get you started with a Cisco Spark Bot very quickly.
 
 ### Getting started with spark 
