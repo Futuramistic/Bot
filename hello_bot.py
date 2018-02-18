@@ -53,7 +53,10 @@ def sparkwebhook():
         if message.personId == me.id:
             return 'OK'
         else:
-            words = message.text.split(' ')
+            string = message.text.replace(',', '')
+            string = string.replace('.', '')
+            string = string.lower()
+            words = string.split(' ')
             x=0
             i=0
             while (i < len(words) and x==0):
@@ -62,7 +65,7 @@ def sparkwebhook():
                     s=random.choice(interaction[word])
                     spark_api.messages.create(room.id, text=s)
                     interaction[word].remove(s)
-                    if(interaction[word] is None):
+                    if(interaction[word] is none):
                         interaction.remove(word)
                     x=1
             if(x==0):
