@@ -1,0 +1,45 @@
+cold,Did you close the window?,Close it.
+hello,Hi. I'm a bot to help you. How are you feeling?,
+hi,Hi. I'm a bot to help you. How are you feeling?,
+good morning,Hi. I'm a bot to help you. How are you feeling?,
+hello,Hi. I'm here to solve some problems that you have. How are you feeling?,
+cold,Do you wear proper clothes for the weather?,Change your clothes to thicker one.
+cold,Did you close the door?,Close it.
+hot,Do you wear proper clothes for this weather?,Change your clothes to thinner one.
+hot,When you put your hand on your forehead is it not unusually warm?,You might have a fever call the doctor now.
+unwell,Have you seen the doctor?,Call the doctor!
+unwell,Did you take your medication?,Take the medication. Don't forget about it.
+well,Have you seen the doctor recently?,Call the doctor!
+well,Did you take your medication today?,Take the medication. Don't forget about it.
+lonely,Did you call your family?,Call or meet them.
+lonely,Did you call your friends?,Call them.
+alone,Have you called your family recently?,Call or meet them.
+alone,Have you called your friends recently?,Maybe it's a good idea to call or meet them.
+smell,Did you turn the cooker off?,Turn it off immediately!
+smell,Did you turn the gas off?,Turn it off immediately!
+hungry,Did you eat something today?,Eat a proper meal.
+unwell,Have you eaten something today?,Eat a proper meal.
+well,Did you eat something?,Eat a proper meal.
+thirsty,Did you drink something today?,Drink some water. It will help.
+well,Have you drunk something today?,Drink some water. It will help.
+unwell,Did you drink something?,Drink some water. It will help.
+tired,Did you get enough sleep?,Go get some sleep. You should have 8 hours of sleep on average.
+tired,Did you eat lately?,Go eat something. You might be tired because of the lack of energy caused by malnutrition.
+bad,What is wrong? ,
+sad,I'm sorry to hear that. Can you tell me more? ,
+dizzy, Dizziness alone is often not much cause for concern especially if it passes after a few moments. Are you better?, If you are experiencing additional symptoms such as vomiting or double vision call a doctor immediately!
+yes,Oh. I see... ,
+yes,That's strange. ,
+yes, Hmmm... ,
+yes, Are you sure? ,
+no,,
+generic,I don't fully understand... ,
+generic,Can you describe it better? ,
+generic,I don't know how I can help... ,
+generic,I don't have a response to this. ,
+nextquery,Do you need more help?, 
+goodbye, I hope you will feel better! Bye.,
+goodbye, It was great to help! Goodbye.,
+another, What else is wrong?,
+another, Tell me what else concerns you,
+another, How can I help you more?,
